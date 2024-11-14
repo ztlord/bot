@@ -17,7 +17,7 @@ class NF(commands.Cog):
         ]
 
     @app_commands.command(name="nickname", description="Muestra todos los cambios de apodo de la usuario.")
-    @app_commands.describe(user="Usuario o ID)
+    @app_commands.describe(user="Username or ID)
     @app_commands.autocomplete(user=user_autocomplete)
     async def nickname(self, interaction: discord.Interaction, user: str):
         fid = int(user)
