@@ -89,7 +89,7 @@ class WCommand(commands.Cog):
 
                             self.c.execute("SELECT * FROM users WHERE fid=?", (fid_value,))
                             result = self.c.fetchone()
-                            footer_text = "Registrado en la Lista ✅" o "No registrado en la Lista ❌"
+                            footer_text = "Registrado en la Lista ✅" if result else "No registrado en la Lista ❌"
 
                             embed = discord.Embed(title=nickname, color=0x00ff00)
                             embed.add_field(name='ID', value=fid_value, inline=True)
