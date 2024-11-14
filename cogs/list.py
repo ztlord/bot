@@ -38,11 +38,11 @@ class List(commands.Cog):
             users = self.c.fetchall()
             user_count = len(users)
 
-            embed_title = f"{self.ALLIANCE_NAME} ALLIANCE LIST ({user_count} members)"
+            embed_title = f"{self.ALLIANCE_NAME} LISTA DE LA ALIANZA ({user_count} usuarios)"
             table = Table(title=embed_title)
-            table.add_column("Name", justify="center")
-            table.add_column("FL", justify="center")
-            table.add_column("Game ID", justify="center")
+            table.add_column("Usuario", justify="center")
+            table.add_column("Horno", justify="center")
+            table.add_column("ID del juego", justify="center")
 
             for user in users:
                 fid, nickname, furnace_lv = user
