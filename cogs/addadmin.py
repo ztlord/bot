@@ -21,7 +21,7 @@ class AdminCog(commands.Cog):
         if admin_count == 0:
             if interaction.user.id != member.id:
                 await interaction.response.send_message(
-                    "Este es el primer admin que se agrega. Utilice el comando solo para usted; "
+                    "Este es el primer admin que se agrega. Utilice el comando solo para usted."
                     "No se permite agregar a otra persona.",
                     ephemeral=True
                 )
